@@ -1,54 +1,98 @@
-document.addEventListener("DOMContentLoaded", function () {
-
-    const menuBtn = document.getElementById("menuBtn");
-    const navMenu = document.getElementById("navMenu");
-
-    if (menuBtn && navMenu) {
-
-        menuBtn.addEventListener("click", function () {
-
-            navMenu.classList.toggle("active");
-
-        });
+const menuBtn = document.getElementById("menuBtn");
+const mainNav = document.getElementById("mainNav");
 
 
-        const navLinks = navMenu.querySelectorAll("a");
+// =========================
+// MOBILE MENU
+// =========================
 
-        navLinks.forEach(function (link) {
+if (menuBtn && mainNav) {
 
-            link.addEventListener("click", function () {
+  menuBtn.addEventListener("click", () => {
 
-                navMenu.classList.remove("active");
+    mainNav.classList.toggle("active");
 
-            });
-
-        });
-
+    if (mainNav.classList.contains("active")) {
+      menuBtn.textContent = "✕";
+    } else {
+      menuBtn.textContent = "☰";
     }
 
+  });
 
-    // تغییر ظاهر هدر هنگام اسکرول
 
-    const header = document.querySelector(".header");
+  document.querySelectorAll("#mainNav a").forEach(link => {
 
-    window.addEventListener("scroll", function () {
+    link.addEventListener("click", () => {
 
-        if (!header) return;
+      mainNav.classList.remove("active");
 
-        if (window.scrollY > 50) {
-
-            header.style.background = "rgba(5, 48, 36, 0.96)";
-            header.style.backdropFilter = "blur(12px)";
-
-        } else {
-
-            header.style.background =
-                "linear-gradient(to bottom, rgba(0,0,0,0.45), transparent)";
-
-            header.style.backdropFilter = "none";
-
-        }
+      menuBtn.textContent = "☰";
 
     });
 
+  });
+
+}
+
+
+// =========================
+// SCROLL ANIMATION
+// =========================
+
+const animatedItems = document.querySelectorAll(
+  ".product-card, .feature, .about-image, .factory-box, .contact-phone"
+);
+
+
+const observer = new IntersectionObserver(
+  entries => {
+
+    entries.forEach(entry => {
+
+      if (entry.isIntersecting) {
+
+        entry.target.style.opacity = "1";
+        entry.target.style.transform = "translateY(0)";
+
+      }
+
+    });
+
+  },
+  {
+    threshold: 0.12
+  }
+);
+
+
+animatedItems.forEach(item => {
+
+  item.style.opacity = "0";
+  item.style.transform = "translateY(25px)";
+  item.style.transition = "opacity .7s ease, transform .7s ease";
+
+  observer.observe(item);
+
 });
+
+
+// =========================
+// COW CLICK
+// =========================
+
+const cow = document.querySelector(".floating-cow");
+
+if (cow) {
+
+  cow.addEventListener("click", () => {
+
+    cow.style.transform = "scale(1.15) rotate(-5deg)";
+
+    setTimeout(() => {
+      cow.style.transform = "";
+    }, 300);
+
+  });
+
+}
