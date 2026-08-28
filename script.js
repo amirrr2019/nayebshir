@@ -1,19 +1,14 @@
 const menuBtn = document.getElementById("menuBtn");
-const mainNav = document.getElementById("mainNav");
+const nav = document.getElementById("nav");
 
-
-// =========================
-// MOBILE MENU
-// =========================
-
-if (menuBtn && mainNav) {
+if (menuBtn && nav) {
 
   menuBtn.addEventListener("click", () => {
 
-    mainNav.classList.toggle("active");
+    nav.classList.toggle("active");
 
-    if (mainNav.classList.contains("active")) {
-      menuBtn.textContent = "✕";
+    if (nav.classList.contains("active")) {
+      menuBtn.textContent = "×";
     } else {
       menuBtn.textContent = "☰";
     }
@@ -21,12 +16,11 @@ if (menuBtn && mainNav) {
   });
 
 
-  document.querySelectorAll("#mainNav a").forEach(link => {
+  nav.querySelectorAll("a").forEach(link => {
 
     link.addEventListener("click", () => {
 
-      mainNav.classList.remove("active");
-
+      nav.classList.remove("active");
       menuBtn.textContent = "☰";
 
     });
@@ -36,24 +30,20 @@ if (menuBtn && mainNav) {
 }
 
 
-// =========================
-// SCROLL ANIMATION
-// =========================
+// نمایش نرم بخش‌ها هنگام اسکرول
 
-const animatedItems = document.querySelectorAll(
-  ".product-card, .feature, .about-image, .factory-box, .contact-phone"
+const items = document.querySelectorAll(
+  ".product, .feature, .about-image, .about-text, .factory-box, .big-phone"
 );
 
-
 const observer = new IntersectionObserver(
-  entries => {
+  (entries) => {
 
     entries.forEach(entry => {
 
       if (entry.isIntersecting) {
 
-        entry.target.style.opacity = "1";
-        entry.target.style.transform = "translateY(0)";
+        entry.target.classList.add("show");
 
       }
 
@@ -66,33 +56,9 @@ const observer = new IntersectionObserver(
 );
 
 
-animatedItems.forEach(item => {
+items.forEach(item => {
 
-  item.style.opacity = "0";
-  item.style.transform = "translateY(25px)";
-  item.style.transition = "opacity .7s ease, transform .7s ease";
-
+  item.classList.add("hidden");
   observer.observe(item);
 
 });
-
-
-// =========================
-// COW CLICK
-// =========================
-
-const cow = document.querySelector(".floating-cow");
-
-if (cow) {
-
-  cow.addEventListener("click", () => {
-
-    cow.style.transform = "scale(1.15) rotate(-5deg)";
-
-    setTimeout(() => {
-      cow.style.transform = "";
-    }, 300);
-
-  });
-
-}
