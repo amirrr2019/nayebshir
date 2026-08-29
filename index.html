@@ -2,701 +2,788 @@
 <html lang="fa" dir="rtl">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>نایب‌شیر | شرکت لبنی چوپان آستانه</title>
+<title>نایب‌شیر | شرکت لبنی چوپان آستانه</title>
 
-    <meta name="description"
-        content="نایب‌شیر - شرکت لبنی چوپان آستانه، تولیدکننده فرآورده‌های لبنی تازه و باکیفیت">
+<meta name="description"
+content="نایب‌شیر - شرکت لبنی چوپان آستانه، تولیدکننده فرآورده‌های لبنی تازه و باکیفیت">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&display=swap"
+rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
+<!-- ================= HEADER ================= -->
 
-        <div class="container nav">
+<header class="header">
 
-            <a href="#home" class="logo">
+<div class="container nav">
 
-                <div class="logo-mark">N</div>
+<a href="#home" class="logo">
 
-                <div class="logo-name">
-                    <strong>نایب‌شیر</strong>
-                    <span>NAYEB SHIR</span>
-                </div>
+<div class="logo-mark">
+N
+</div>
 
-            </a>
+<div class="logo-name">
 
-            <!-- گاو عروسکی -->
-            <div class="cow-mascot-wrapper" onclick="openModal()">
+<strong>
+نایب‌شیر
+</strong>
 
-                <div class="cow-mascot" id="cowMascot">
-                    <img src="cow.png" alt="گاو عروسکی نایب‌شیر">
-                </div>
+<span>
+NAYEB SHIR
+</span>
 
-                <span class="cow-mascot-label">
-                    🎮 بازی کن و جایزه ببر!
-                    <small>کلیک کن</small>
-                </span>
+</div>
 
-            </div>
+</a>
 
-            <span class="sub-brand">
-                شرکت لبنی چوپان آستانه
-            </span>
 
-            <nav id="nav">
+<!-- گاو بالای سایت -->
 
-                <a href="#home">خانه</a>
+<div class="cow-mascot-wrapper"
+onclick="openModal()">
 
-                <a href="#products-link" onclick="toggleProducts()">
-                    محصولات
-                </a>
+<div class="cow-mascot"
+id="cowMascot">
 
-                <a href="#factory">
-                    کارخانه
-                </a>
+<img src="./cow.png"
+alt="گاو عروسکی نایب‌شیر">
 
-                <a href="#contact">
-                    تماس با ما
-                </a>
+</div>
 
-            </nav>
+<span class="cow-mascot-label">
 
-            <button id="menuBtn" class="menu-btn">
-                ☰
-            </button>
+🎮 بازی کن و جایزه ببر!
 
-        </div>
+<small>
+کلیک کن
+</small>
 
-    </header>
+</span>
 
+</div>
 
-    <main>
 
-        <!-- HERO -->
-        <section class="hero" id="home">
+<span class="sub-brand">
+شرکت لبنی چوپان آستانه
+</span>
 
-            <div class="container hero-content">
 
-                <div class="hero-text">
+<nav id="nav">
 
-                    <span class="mini-title">
-                        شرکت لبنی چوپان آستانه
-                    </span>
+<a href="#home">
+خانه
+</a>
 
-                    <div class="hero-brand-banner">
-                        نایب‌شیر
+<a href="#products-link"
+onclick="toggleProducts()">
+محصولات
+</a>
 
-                        <small>
-                            از سال ۱۳۸۲
-                        </small>
-                    </div>
+<a href="#factory">
+کارخانه
+</a>
 
-                    <p>
-                        تولید فرآورده‌های لبنی تازه، سالم و باکیفیت
-                        با رعایت بالاترین استانداردهای کنترل کیفی.
-                    </p>
+<a href="#contact">
+تماس با ما
+</a>
 
-                    <button class="toggle-products-btn"
-                        onclick="toggleProducts()">
+</nav>
 
-                        🛒 مشاهده محصولات
 
-                    </button>
+<button id="menuBtn"
+class="menu-btn">
+☰
+</button>
 
-                </div>
+</div>
 
+</header>
 
-                <!-- گاوهای عروسکی -->
-                <div class="hero-product">
 
-                    <div class="cow-sticker male"
-                        id="cowMale"
-                        onclick="jumpCow('male')">
+<!-- ================= MAIN ================= -->
 
-                        <img src="cow.png"
-                            alt="گاو عروسکی نایب‌شیر">
+<main>
 
-                    </div>
 
+<!-- HERO -->
 
-                    <div class="cow-sticker female"
-                        id="cowFemale"
-                        onclick="jumpCow('female')">
+<section class="hero"
+id="home">
 
-                        <img src="cow.png"
-                            alt="گاو عروسکی نایب‌شیر">
+<div class="container hero-content">
 
-                    </div>
 
+<div class="hero-text">
 
-                    <div class="cream-card">
+<span class="mini-title">
+شرکت لبنی چوپان آستانه
+</span>
 
-                        <div class="icon-big">
-                            🥛
-                        </div>
 
-                        <strong>
-                            تازه و سالم
-                        </strong>
+<div class="hero-brand-banner">
 
-                        <small>
-                            NAYEB SHIR
-                        </small>
+نایب‌شیر
 
-                    </div>
+<small>
+از سال ۱۳۸۲
+</small>
 
-                </div>
+</div>
 
-            </div>
 
-        </section>
+<p>
+تولید فرآورده‌های لبنی تازه، سالم و باکیفیت
+با رعایت بالاترین استانداردهای کنترل کیفی.
+</p>
 
 
-        <!-- PRODUCTS -->
-        <section class="section" id="products-link">
+<button class="toggle-products-btn"
+onclick="toggleProducts()">
 
-            <div class="container">
+🛒 مشاهده محصولات
 
-                <div class="products-wrapper"
-                    id="productsWrapper">
+</button>
 
-                    <div class="section-title">
+</div>
 
-                        <h2>
-                            محصولات نایب‌شیر
-                        </h2>
 
-                        <p>
-                            مجموعه‌ای از تازه‌ترین فرآورده‌های لبنی
-                        </p>
+<!-- ================= گاوهای سایت ================= -->
 
-                    </div>
+<div class="hero-product">
 
 
-                    <div class="products-grid">
+<!-- گاو سمت راست -->
 
+<div class="cow-sticker male"
+id="cowMale"
+onclick="jumpCow('male')">
 
-                        <!-- ماست -->
-                        <div class="product">
+<img src="./cow.png"
+alt="گاو عروسکی نایب‌شیر">
 
-                            <span class="product-emoji">
-                                🥣
-                            </span>
+</div>
 
-                            <div class="product-info">
 
-                                <small>
-                                    ماست
-                                </small>
+<!-- گاو سمت چپ -->
 
-                                <h3>
-                                    ماست ۲/۵ کیلویی و ۱ کیلویی
-                                </h3>
+<div class="cow-sticker female"
+id="cowFemale"
+onclick="jumpCow('female')">
 
-                                <p>
-                                    ماست تازه و پرچرب در بسته‌بندی کاسه‌ای.
-                                </p>
+<img src="./cow.png"
+alt="گاو عروسکی نایب‌شیر">
 
-                            </div>
+</div>
 
-                        </div>
 
+<!-- کارت -->
 
-                        <!-- دوغ -->
-                        <div class="product">
+<div class="cream-card">
 
-                            <span class="product-emoji">
-                                🥤
-                            </span>
+<div class="icon-big">
+🥛
+</div>
 
-                            <div class="product-info">
+<strong>
+تازه و سالم
+</strong>
 
-                                <small>
-                                    دوغ
-                                </small>
+<small>
+NAYEB SHIR
+</small>
 
-                                <h3>
-                                    دوغ ۲۵۰ سی‌سی و ۱/۵ لیتری
-                                </h3>
+</div>
 
-                                <p>
-                                    دوغ گوارا و خوش‌طعم.
-                                </p>
 
-                            </div>
+</div>
 
-                        </div>
+</div>
 
+</section>
 
-                        <!-- شیر -->
-                        <div class="product">
 
-                            <span class="product-emoji">
-                                🥛
-                            </span>
+<!-- ================= PRODUCTS ================= -->
 
-                            <div class="product-info">
+<section class="section"
+id="products-link">
 
-                                <small>
-                                    شیر
-                                </small>
+<div class="container">
 
-                                <h3>
-                                    شیر نایلونی ۱ لیتری
-                                </h3>
+<div class="products-wrapper"
+id="productsWrapper">
 
-                                <p>
-                                    شیر تازه و طبیعی در بسته‌بندی نایلونی.
-                                </p>
 
-                            </div>
+<div class="section-title">
 
-                        </div>
+<h2>
+محصولات نایب‌شیر
+</h2>
 
+<p>
+مجموعه‌ای از تازه‌ترین فرآورده‌های لبنی
+</p>
 
-                        <!-- خامه -->
-                        <div class="product">
+</div>
 
-                            <span class="product-emoji">
-                                🍰
-                            </span>
 
-                            <div class="product-info">
+<div class="products-grid">
 
-                                <small>
-                                    خامه قنادی
-                                </small>
 
-                                <h3>
-                                    خامه قنادی ۱ و ۱۰ کیلویی
-                                </h3>
+<!-- ماست -->
 
-                                <p>
-                                    خامه عالی برای تزئین کیک و شیرینی.
-                                </p>
+<div class="product">
 
-                            </div>
+<span class="product-emoji">
+🥣
+</span>
 
-                        </div>
+<div class="product-info">
 
+<small>
+ماست
+</small>
 
-                        <!-- پنیر -->
-                        <div class="product">
+<h3>
+ماست ۲/۵ کیلویی و ۱ کیلویی
+</h3>
 
-                            <span class="product-emoji">
-                                🧀
-                            </span>
+<p>
+ماست تازه و پرچرب در بسته‌بندی کاسه‌ای.
+</p>
 
-                            <div class="product-info">
+</div>
 
-                                <small>
-                                    پنیر
-                                </small>
+</div>
 
-                                <h3>
-                                    پنیر سطلی
-                                </h3>
 
-                                <p>
-                                    پنیر سفید با طعم طبیعی و کیفیت بالا.
-                                </p>
+<!-- دوغ -->
 
-                            </div>
+<div class="product">
 
-                        </div>
+<span class="product-emoji">
+🥤
+</span>
 
+<div class="product-info">
 
-                        <!-- کره -->
-                        <div class="product">
+<small>
+دوغ
+</small>
 
-                            <span class="product-emoji">
-                                🧈
-                            </span>
+<h3>
+دوغ ۲۵۰ سی‌سی و ۱/۵ لیتری
+</h3>
 
-                            <div class="product-info">
+<p>
+دوغ گوارا و خوش‌طعم.
+</p>
 
-                                <small>
-                                    کره
-                                </small>
+</div>
 
-                                <h3>
-                                    کره ۱ کیلویی
-                                </h3>
+</div>
 
-                                <p>
-                                    کره طبیعی برای پخت‌وپز و شیرینی‌پزی.
-                                </p>
 
-                            </div>
+<!-- شیر -->
 
-                        </div>
+<div class="product">
 
-                    </div>
+<span class="product-emoji">
+🥛
+</span>
 
-                </div>
+<div class="product-info">
 
-            </div>
+<small>
+شیر
+</small>
 
-        </section>
+<h3>
+شیر نایلونی ۱ لیتری
+</h3>
 
+<p>
+شیر تازه و طبیعی در بسته‌بندی نایلونی.
+</p>
 
-        <!-- FACTORY -->
-        <section class="factory-section"
-            id="factory">
+</div>
 
-            <div class="container">
+</div>
 
-                <div class="factory-header">
 
-                    <h2>
-                        کارخانه نایب‌شیر
-                    </h2>
+<!-- خامه -->
 
-                    <p>
-                        ساری، کیلومتر ۷ جاده ساری به سمنان،
-                        ابتدای ورودی آستانه مبارکه، پهنه‌کلا
-                    </p>
+<div class="product">
 
-                </div>
+<span class="product-emoji">
+🍰
+</span>
 
+<div class="product-info">
 
-                <div class="factory-box">
+<small>
+خامه قنادی
+</small>
 
-                    <div>
+<h3>
+خامه قنادی ۱ و ۱۰ کیلویی
+</h3>
 
+<p>
+خامه عالی برای تزئین کیک و شیرینی.
+</p>
 
-                        <!-- آدرس -->
-                        <div class="detail">
+</div>
 
-                            <a href="https://www.google.com/maps/search/?api=1&query=36.457592,53.076929"
-                                target="_blank"
-                                rel="noopener noreferrer">
+</div>
 
-                                <span class="detail-icon">
-                                    📍
-                                </span>
 
-                                <div>
+<!-- پنیر -->
 
-                                    <small>
-                                        آدرس
-                                    </small>
+<div class="product">
 
-                                    <strong>
-                                        ساری، کیلومتر ۷ جاده ساری به سمنان،
-                                        ابتدای ورودی آستانه مبارکه، پهنه‌کلا
-                                    </strong>
+<span class="product-emoji">
+🧀
+</span>
 
-                                </div>
+<div class="product-info">
 
-                            </a>
+<small>
+پنیر
+</small>
 
-                        </div>
+<h3>
+پنیر سطلی
+</h3>
 
+<p>
+پنیر سفید با طعم طبیعی و کیفیت بالا.
+</p>
 
-                        <!-- تلفن -->
-                        <div class="detail">
+</div>
 
-                            <a href="tel:01133532778">
+</div>
 
-                                <span class="detail-icon">
-                                    📞
-                                </span>
 
-                                <div>
+<!-- کره -->
 
-                                    <small>
-                                        تلفن
-                                    </small>
+<div class="product">
 
-                                    <strong>
-                                        ۰۱۱۳۳۵۳۲۷۷۸
-                                    </strong>
+<span class="product-emoji">
+🧈
+</span>
 
-                                </div>
+<div class="product-info">
 
-                            </a>
+<small>
+کره
+</small>
 
-                        </div>
+<h3>
+کره ۱ کیلویی
+</h3>
 
+<p>
+کره طبیعی برای پخت‌وپز و شیرینی‌پزی.
+</p>
 
-                        <!-- فکس -->
-                        <div class="detail">
+</div>
 
-                            <div>
+</div>
 
-                                <span class="detail-icon">
-                                    📠
-                                </span>
 
-                                <div>
+</div>
 
-                                    <small>
-                                        فکس
-                                    </small>
+</div>
 
-                                    <strong>
-                                        ۰۱۱۳۳۵۳۲۸۸۰
-                                    </strong>
+</div>
 
-                                </div>
+</section>
 
-                            </div>
 
-                        </div>
+<!-- ================= FACTORY ================= -->
 
+<section class="factory-section"
+id="factory">
 
-                        <button class="expand-btn"
-                            onclick="toggleExpand()">
+<div class="container">
 
-                            📋 بیشتر درباره کارخانه
 
-                        </button>
+<div class="factory-header">
 
+<h2>
+کارخانه نایب‌شیر
+</h2>
 
-                        <div class="expand-content"
-                            id="expandContent">
+<p>
+ساری، کیلومتر ۷ جاده ساری به سمنان،
+ابتدای ورودی آستانه مبارکه، پهنه‌کلا
+</p>
 
-                            <p>
-                                ✅ تولید انواع محصولات لبنی تازه و سالم
-                            </p>
+</div>
 
-                            <p>
-                                ✅ فعالیت از سال ۱۳۸۲
-                            </p>
 
-                            <p>
-                                ✅ کنترل دقیق کیفیت محصولات
-                            </p>
+<div class="factory-box">
 
-                            <p>
-                                ✅ استفاده از تجهیزات مناسب تولید
-                            </p>
 
-                            <p>
-                                ✅ توزیع محصولات با رعایت زنجیره سرد
-                            </p>
+<div>
 
-                        </div>
 
-                    </div>
+<!-- آدرس -->
 
+<div class="detail">
 
-                    <!-- MAP -->
-                    <div class="map">
+<a href="https://www.google.com/maps/search/?api=1&query=36.457592,53.076929"
+target="_blank"
+rel="noopener noreferrer">
 
-                        <div class="map-pin">
+<span class="detail-icon">
+📍
+</span>
 
-                            <span>
-                                📍
-                            </span>
+<div>
 
-                            <strong>
-                                نایب‌شیر
-                            </strong>
+<small>
+آدرس
+</small>
 
-                            <small>
-                                36.457592 , 53.076929
-                            </small>
+<strong>
+ساری، کیلومتر ۷ جاده ساری به سمنان،
+ابتدای ورودی آستانه مبارکه، پهنه‌کلا
+</strong>
 
-                            <a href="https://www.google.com/maps/search/?api=1&query=36.457592,53.076929"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                class="map-button">
+</div>
 
-                                🧭 مسیریابی
+</a>
 
-                            </a>
+</div>
 
-                        </div>
 
-                    </div>
+<!-- تلفن -->
 
-                </div>
+<div class="detail">
 
-            </div>
+<a href="tel:01133532778">
 
-        </section>
+<span class="detail-icon">
+📞
+</span>
 
+<div>
 
-        <!-- CONTACT -->
-        <section class="contact"
-            id="contact">
+<small>
+تلفن
+</small>
 
-            <div class="container contact-box">
+<strong>
+۰۱۱۳۳۵۳۲۷۷۸
+</strong>
 
-                <div class="contact-info">
+</div>
 
-                    <h2>
-                        تماس با ما
-                    </h2>
+</a>
 
-                    <p>
-                        پاسخگوی سفارشات عمده و مشاوره فروش
-                    </p>
+</div>
 
-                </div>
 
+<!-- فکس -->
 
-                <div class="contact-numbers">
+<div class="detail">
 
+<span class="detail-icon">
+📠
+</span>
 
-                    <a href="tel:01133532778"
-                        class="contact-number">
+<div>
 
-                        <span class="icon">
-                            📞
-                        </span>
+<small>
+فکس
+</small>
 
-                        <span class="number">
+<strong>
+۰۱۱۳۳۵۳۲۸۸۰
+</strong>
 
-                            <small>
-                                تلفن
-                            </small>
+</div>
 
-                            <strong>
-                                ۰۱۱۳۳۵۳۲۷۷۸
-                            </strong>
+</div>
 
-                        </span>
 
-                    </a>
+<button class="expand-btn"
+onclick="toggleExpand()">
 
+📋 بیشتر درباره کارخانه
 
-                    <div class="contact-number">
+</button>
 
-                        <span class="icon">
-                            📠
-                        </span>
 
-                        <span class="number">
+<div class="expand-content"
+id="expandContent">
 
-                            <small>
-                                فکس
-                            </small>
+<p>
+✅ تولید انواع محصولات لبنی تازه و سالم
+</p>
 
-                            <strong>
-                                ۰۱۱۳۳۵۳۲۸۸۰
-                            </strong>
+<p>
+✅ فعالیت از سال ۱۳۸۲
+</p>
 
-                        </span>
+<p>
+✅ کنترل دقیق کیفیت محصولات
+</p>
 
-                    </div>
+<p>
+✅ استفاده از تجهیزات مناسب تولید
+</p>
 
-                </div>
+<p>
+✅ توزیع محصولات با رعایت زنجیره سرد
+</p>
 
-            </div>
+</div>
 
-        </section>
 
-    </main>
+</div>
 
 
-    <!-- FOOTER -->
-    <footer>
+<!-- MAP -->
 
-        <div class="container">
+<div class="map">
 
-            <p>
-                © ۱۴۰۵
-                <strong>
-                    نایب‌شیر
-                </strong>
-                - شرکت لبنی چوپان آستانه
-                | تمامی حقوق محفوظ است.
-            </p>
+<div class="map-pin">
 
-        </div>
+<span>
+📍
+</span>
 
-    </footer>
+<strong>
+نایب‌شیر
+</strong>
 
+<small>
+36.457592 , 53.076929
+</small>
 
-    <!-- MODAL -->
-    <div class="modal-overlay"
-        id="cowModal">
 
-        <div class="modal-box">
+<a href="https://www.google.com/maps/search/?api=1&query=36.457592,53.076929"
+target="_blank"
+rel="noopener noreferrer"
+class="map-button">
 
-            <button class="modal-close"
-                onclick="closeModal()">
+🧭 مسیریابی
 
-                ✕
+</a>
 
-            </button>
+</div>
 
+</div>
 
-            <div class="modal-cow">
 
-                <img src="cow.png"
-                    alt="گاو عروسکی نایب‌شیر">
+</div>
 
-            </div>
+</div>
 
+</section>
 
-            <span class="game-badge">
-                🎮 مینی‌اپ بازی
-            </span>
 
+<!-- ================= CONTACT ================= -->
 
-            <h3>
-                سلام! من گاوی نایب‌شیرم! 🐮
-            </h3>
+<section class="contact"
+id="contact">
 
+<div class="container contact-box">
 
-            <div class="game-emoji">
-                🐄 ➜ 🏭
-            </div>
 
+<div class="contact-info">
 
-            <p>
+<h2>
+تماس با ما
+</h2>
 
-                <strong>
-                    🎯 شیر رو از مزرعه برسون به کارخونه!
-                </strong>
+<p>
+پاسخگوی سفارشات عمده و مشاوره فروش
+</p>
 
-                <br>
+</div>
 
-                🌾 ماجراجویی کن، از موانع عبور کن و جایزه بگیر!
 
-                <br>
+<div class="contact-numbers">
 
-                ⭐ هر روز یک چالش جدید منتظرته!
 
-            </p>
+<a href="tel:01133532778"
+class="contact-number">
 
+<span class="icon">
+📞
+</span>
 
-            <a href="https://t.me/NAYEB_SHIR_BOT"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="telegram-btn">
+<span class="number">
 
-                <span>
-                    🚀
-                </span>
+<small>
+تلفن
+</small>
 
-                شروع ماجراجویی در تلگرام
+<strong>
+۰۱۱۳۳۵۳۲۷۷۸
+</strong>
 
-            </a>
+</span>
 
-        </div>
+</a>
 
-    </div>
 
+<div class="contact-number">
 
-    <script src="script.js"></script>
+<span class="icon">
+📠
+</span>
+
+<span class="number">
+
+<small>
+فکس
+</small>
+
+<strong>
+۰۱۱۳۳۵۳۲۸۸۰
+</strong>
+
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="container">
+
+<p>
+
+© ۱۴۰۵
+
+<strong>
+نایب‌شیر
+</strong>
+
+- شرکت لبنی چوپان آستانه
+
+| تمامی حقوق محفوظ است.
+
+</p>
+
+</div>
+
+</footer>
+
+
+<!-- ================= MODAL ================= -->
+
+<div class="modal-overlay"
+id="cowModal">
+
+<div class="modal-box">
+
+
+<button class="modal-close"
+onclick="closeModal()">
+
+✕
+
+</button>
+
+
+<!-- گاو داخل پنجره -->
+
+<div class="modal-cow">
+
+<img src="./cow.png"
+alt="گاو عروسکی نایب‌شیر">
+
+</div>
+
+
+<span class="game-badge">
+
+🎮 مینی‌اپ بازی
+
+</span>
+
+
+<h3>
+
+سلام! من گاوی نایب‌شیرم! 🐮
+
+</h3>
+
+
+<div class="game-emoji">
+
+🐄 ➜ 🏭
+
+</div>
+
+
+<p>
+
+<strong>
+🎯 شیر رو از مزرعه برسون به کارخونه!
+</strong>
+
+<br>
+
+🌾 ماجراجویی کن، از موانع عبور کن و جایزه بگیر!
+
+<br>
+
+⭐ هر روز یک چالش جدید منتظرته!
+
+</p>
+
+
+<a href="https://t.me/NAYEB_SHIR_BOT"
+target="_blank"
+rel="noopener noreferrer"
+class="telegram-btn">
+
+<span>
+🚀
+</span>
+
+شروع ماجراجویی در تلگرام
+
+</a>
+
+
+</div>
+
+</div>
+
+
+<!-- JS -->
+
+<script src="./script.js"></script>
 
 </body>
 
-</html>
+    </html>
