@@ -3,519 +3,235 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>نایب‌شیر | شرکت لبنی چوپان آستانه</title>
-
-  <meta name="description"
-        content="شرکت لبنی چوپان آستانه با برند نایب‌شیر، تولیدکننده فرآورده‌های لبنی و خامه قنادی">
-
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header class="header">
   <div class="container nav">
-
     <a href="#home" class="logo">
       <div class="logo-mark">N</div>
-
       <div class="logo-name">
         <strong>نایب‌شیر</strong>
         <span>NAYEB SHIR</span>
       </div>
     </a>
-
+    <!-- گاو کارتونی با نوشته "بازی کن و جایزه ببر!" -->
+    <div class="cow-mascot-wrapper" onclick="openModal()">
+      <div class="cow-mascot" id="cowMascot">
+        <img src="images/cow.png" alt="گاو نایب‌شیر">
+      </div>
+      <span class="cow-mascot-label">
+        🎮 بازی کن و جایزه ببر!
+        <small>کلیک کن</small>
+      </span>
+    </div>
+    <span class="sub-brand">شرکت لبنی چوپان آستانه</span>
     <nav id="nav">
       <a href="#home">خانه</a>
-      <a href="#products">محصولات</a>
-      <a href="#about">درباره ما</a>
+      <a href="#products-link" onclick="toggleProducts()">محصولات</a>
       <a href="#factory">کارخانه</a>
       <a href="#contact">تماس با ما</a>
     </nav>
-
-    <a href="tel:01133532778" class="header-call">
-      تماس با ما
-    </a>
-
     <button id="menuBtn" class="menu-btn">☰</button>
-
   </div>
 </header>
 
-
 <main>
-
-<!-- HERO -->
-
-<section class="hero" id="home">
-
-  <div class="hero-bg"></div>
-
-  <div class="container hero-content">
-
-    <div class="hero-text">
-
-      <span class="mini-title">
-        شرکت لبنی چوپان آستانه
-      </span>
-
-      <h1>
-        طعم خوب،
-        <br>
-        <span>از نایب‌شیر</span>
-      </h1>
-
-      <p>
-        تولیدکننده فرآورده‌های لبنی و خامه قنادی
-        با تمرکز بر کیفیت، سلامت و رضایت مشتری.
-      </p>
-
-      <div class="hero-buttons">
-
-        <a href="#products" class="btn primary">
-          محصولات ما
-          <b>←</b>
-        </a>
-
-        <a href="tel:01133532778" class="btn secondary">
-          <span>☎</span>
-          تماس با کارخانه
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <div class="hero-product">
-
-      <div class="circle circle-one"></div>
-      <div class="circle circle-two"></div>
-
-      <div class="cream-card">
-
-        <div class="cream-icon">
-          🥛
+  <section class="hero" id="home">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="mini-title">شرکت لبنی چوپان آستانه</span>
+        <div class="hero-brand-banner">
+          نایب‌شیر
+          <small>از سال ۱۳۸۲</small>
         </div>
-
-        <span>NAYEB SHIR</span>
-
-        <strong>
-          کیفیتی که
-          <br>
-          می‌توان به آن اعتماد کرد
-        </strong>
-
-        <small>
-          MADE WITH QUALITY
-        </small>
-
+        <p>تولید فرآورده‌های لبنی تازه، سالم و باکیفیت با رعایت بالاترین استانداردهای کنترل کیفی.</p>
+        <button class="toggle-products-btn" onclick="toggleProducts()">🛒 مشاهده محصولات</button>
       </div>
-
-    </div>
-
-  </div>
-</section>
-
-
-<!-- FEATURES -->
-
-<section class="features">
-
-  <div class="container features-inner">
-
-    <div class="feature">
-      <div class="feature-icon">✓</div>
-      <div>
-        <strong>کیفیت بالا</strong>
-        <span>اولویت ما در تولید</span>
+      <div class="hero-product">
+        <!-- گاو نر (آقا) -->
+        <div class="cow-sticker male" id="cowMale" onclick="jumpCow('male')">
+          <img src="images/cow-male.png" alt="گاو نر">
+        </div>
+        <!-- گاو ماده (خانم) -->
+        <div class="cow-sticker female" id="cowFemale" onclick="jumpCow('female')">
+          <img src="images/cow-female.png" alt="گاو ماده">
+        </div>
+        <div class="cream-card">
+          <div class="icon-big">🥛</div>
+          <strong>تازه و سالم</strong>
+          <small>NAYEB SHIR</small>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="feature">
-      <div class="feature-icon">✦</div>
-      <div>
-        <strong>تولید تخصصی</strong>
-        <span>تجربه در فرآورده‌های لبنی</span>
-      </div>
-    </div>
-
-    <div class="feature">
-      <div class="feature-icon">♡</div>
-      <div>
-        <strong>اعتماد شما</strong>
-        <span>هدف همیشگی نایب‌شیر</span>
-      </div>
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- PRODUCTS -->
-
-<section class="section products" id="products">
-
-  <div class="container">
-
-    <div class="section-title">
-
-      <span>محصولات نایب‌شیر</span>
-
-      <h2>
-        محصولاتی برای
-        <br>
-        یک تجربه خوش‌طعم
-      </h2>
-
-      <p>
-        کیفیت، طعم و رضایت مشتری در قلب محصولات نایب‌شیر قرار دارد.
-      </p>
-
-    </div>
-
-
-    <div class="products-grid">
-
-      <article class="product">
-
-        <div class="product-image cream">
-          <div class="product-symbol">🥛</div>
-          <span>NAYEB SHIR</span>
+  <section class="section" id="products-link">
+    <div class="container">
+      <div class="products-wrapper" id="productsWrapper">
+        <div class="section-title">
+          <h2>محصولات نایب‌شیر</h2>
+          <p>مجموعه‌ای از تازه‌ترین فرآورده‌های لبنی</p>
         </div>
-
-        <div class="product-info">
-          <small>محصول ویژه</small>
-          <h3>خامه قنادی</h3>
-
-          <p>
-            مناسب برای قنادی‌ها، شیرینی‌پزی‌ها،
-            دسرها و انواع محصولات قنادی.
-          </p>
-
-          <a href="#contact">
-            اطلاعات بیشتر
-            <b>←</b>
-          </a>
-        </div>
-
-      </article>
-
-
-      <article class="product">
-
-        <div class="product-image milk">
-          <div class="product-symbol">🥛</div>
-          <span>NAYEB SHIR</span>
-        </div>
-
-        <div class="product-info">
-          <small>فرآورده لبنی</small>
-          <h3>محصولات لبنی</h3>
-
-          <p>
-            مجموعه‌ای از فرآورده‌های لبنی
-            با تمرکز بر کیفیت و سلامت.
-          </p>
-
-          <a href="#contact">
-            اطلاعات بیشتر
-            <b>←</b>
-          </a>
-        </div>
-
-      </article>
-
-
-      <article class="product">
-
-        <div class="product-image dairy">
-          <div class="product-symbol">🧀</div>
-          <span>NAYEB SHIR</span>
-        </div>
-
-        <div class="product-info">
-          <small>محصولات متنوع</small>
-          <h3>فرآورده‌های نایب‌شیر</h3>
-
-          <p>
-            تولید محصولات متنوع برای مصرف‌کنندگان
-            و مشتریان عمده.
-          </p>
-
-          <a href="#contact">
-            اطلاعات بیشتر
-            <b>←</b>
-          </a>
-        </div>
-
-      </article>
-
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ABOUT -->
-
-<section class="section about" id="about">
-
-  <div class="container about-grid">
-
-    <div class="about-image">
-
-      <div class="about-n">
-        N
-      </div>
-
-      <div class="about-overlay">
-        <span>NAYEB SHIR</span>
-        <strong>کیفیت، پایه اعتماد ماست.</strong>
-      </div>
-
-    </div>
-
-
-    <div class="about-text">
-
-      <span class="gold-title">
-        درباره نایب‌شیر
-      </span>
-
-      <h2>
-        از تولید،
-        <br>
-        تا اعتماد شما
-      </h2>
-
-      <p>
-        شرکت لبنی چوپان آستانه با برند نایب‌شیر
-        در زمینه تولید فرآورده‌های لبنی و خامه قنادی
-        فعالیت می‌کند.
-      </p>
-
-      <p>
-        هدف ما ارائه محصولاتی با کیفیت مناسب و
-        ایجاد تجربه‌ای قابل اعتماد برای مشتریان است.
-      </p>
-
-      <div class="about-points">
-
-        <div>
-          <strong>نایب‌شیر</strong>
-          <span>برند ما</span>
-        </div>
-
-        <div>
-          <strong>کیفیت</strong>
-          <span>اصل ما</span>
-        </div>
-
-        <div>
-          <strong>اعتماد</strong>
-          <span>هدف ما</span>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-
-<!-- FACTORY -->
-
-<section class="section factory" id="factory">
-
-  <div class="container">
-
-    <div class="factory-header">
-      <span>آدرس کارخانه</span>
-
-      <h2>
-        ما را پیدا کنید
-      </h2>
-
-      <p>
-        کارخانه شرکت لبنی چوپان آستانه در ساری،
-        کیلومتر ۷ جاده ساری به سمنان،
-        ابتدای ورودی آستانه مبارکه، پهنه‌کلا قرار دارد.
-      </p>
-    </div>
-
-
-    <div class="factory-box">
-
-      <div class="factory-details">
-
-        <div class="detail">
-          <div class="detail-icon">📍</div>
-
-          <div>
-            <small>آدرس</small>
-            <strong>
-              ساری، کیلومتر ۷ جاده ساری به سمنان،
-              ابتدای ورودی آستانه مبارکه، پهنه‌کلا
-            </strong>
+        <div class="products-grid">
+          <div class="product">
+            <span class="product-emoji">🥣</span>
+            <div class="product-info">
+              <small>ماست</small>
+              <h3>ماست ۲/۵ کیلویی و ۱ کیلویی</h3>
+              <p>ماست تازه و پرچرب در بسته‌بندی کاسه‌ای.</p>
+            </div>
+          </div>
+          <div class="product">
+            <span class="product-emoji">🥤</span>
+            <div class="product-info">
+              <small>دوغ</small>
+              <h3>دوغ ۲۵۰ سی‌سی و ۱/۵ لیتری</h3>
+              <p>دوغ گوارا و خوش‌طعم در لیوان‌های یکبارمصرف.</p>
+            </div>
+          </div>
+          <div class="product">
+            <span class="product-emoji">🥛</span>
+            <div class="product-info">
+              <small>شیر</small>
+              <h3>شیر نایلونی ۱ لیتری</h3>
+              <p>شیر تازه و طبیعی در بسته‌بندی لیوانی.</p>
+            </div>
+          </div>
+          <div class="product">
+            <span class="product-emoji">🍰</span>
+            <div class="product-info">
+              <small>خامه قنادی</small>
+              <h3>خامه قنادی ۱ و ۱۰ کیلویی</h3>
+              <p>خامه‌ی عالی برای تزئین کیک و شیرینی.</p>
+            </div>
+          </div>
+          <div class="product">
+            <span class="product-emoji">🧀</span>
+            <div class="product-info">
+              <small>پنیر</small>
+              <h3>پنیر سطلی</h3>
+              <p>پنیر سفید با طعم طبیعی و کیفیت بالا.</p>
+            </div>
+          </div>
+          <div class="product">
+            <span class="product-emoji">🧈</span>
+            <div class="product-info">
+              <small>کره</small>
+              <h3>کره ۱ کیلویی</h3>
+              <p>کره‌ی طبیعی برای پخت و پز و شیرینی‌پزی.</p>
+            </div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
 
+  <section class="factory-section" id="factory">
+    <div class="container">
+      <div class="factory-header">
+        <h2>کارخانه نایب‌شیر</h2>
+        <p>ساری، کیلومتر ۷ جاده ساری به سمنان، پهنه‌کلا</p>
+      </div>
+      <div class="factory-box">
+        <div>
+          <div class="detail">
+            <a href="https://www.google.com/maps/search/?api=1&query=36.457592,53.076929" target="_blank">
+              <span class="detail-icon">📍</span>
+              <div>
+                <small>آدرس</small>
+                <strong>ساری، کیلومتر ۷ جاده ساری به سمنان، پهنه‌کلا</strong>
+              </div>
+            </a>
+          </div>
+          <div class="detail">
+            <div class="detail-icon">📞</div>
+            <div>
+              <small>تلفن</small>
+              <strong>۰۱۱۳۳۵۳۲۷۷۸</strong>
+            </div>
+          </div>
+          <div class="detail">
+            <div class="detail-icon">📠</div>
+            <div>
+              <small>فکس</small>
+              <strong>۰۱۱۳۳۵۳۲۸۸۰</strong>
+            </div>
+          </div>
+          <button class="expand-btn" onclick="toggleExpand()">📋 بیشتر درباره کارخانه</button>
+          <div class="expand-content" id="expandContent">
+            <p>✅ تولید انواع محصولات لبنی تازه و سالم از سال ۱۳۸۲</p>
+            <p>✅ دارنده تمامی استانداردهای کنترل کیفی (ISO 22000, HACCP)</p>
+            <p>✅ استفاده از بهترین مواد اولیه و تجهیزات به‌روز</p>
+            <p>✅ توزیع در سراسر کشور با حفظ زنجیره سرد</p>
+          </div>
+        </div>
+        <div class="map">
+          <div class="map-pin">
+            <span>📍</span>
+            <strong>نایب‌شیر</strong>
+            <small>36.457592, 53.076929</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="detail">
-          <div class="detail-icon">☎</div>
-
-          <div>
-            <small>تلفن کارخانه</small>
+  <section class="contact" id="contact">
+    <div class="container contact-box">
+      <div class="contact-info">
+        <h2>تماس با ما</h2>
+        <p>پاسخگوی سفارشات عمده و مشاوره فروش</p>
+      </div>
+      <div class="contact-numbers">
+        <a href="tel:01133532778" class="contact-number">
+          <span class="icon">📞</span>
+          <span class="number">
+            <small>تلفن</small>
             <strong>۰۱۱۳۳۵۳۲۷۷۸</strong>
-          </div>
-        </div>
-
-
-        <div class="factory-actions">
-
-          <a href="tel:01133532778" class="btn primary">
-            تماس تلفنی
-            <span>☎</span>
-          </a>
-
-          <a
-            href="https://www.google.com/maps/search/?api=1&query=36.4591236,53.113"
-            target="_blank"
-            class="btn secondary"
-          >
-            مسیریابی
-            <span>↗</span>
-          </a>
-
-        </div>
-
+          </span>
+        </a>
+        <a href="tel:01133532880" class="contact-number">
+          <span class="icon">📠</span>
+          <span class="number">
+            <small>فکس</small>
+            <strong>۰۱۱۳۳۵۳۲۸۸۰</strong>
+          </span>
+        </a>
       </div>
-
-
-      <div class="map">
-
-        <div class="map-grid"></div>
-
-        <div class="map-pin">
-          <span>📍</span>
-          <strong>نایب‌شیر</strong>
-          <small>SARI • IRAN</small>
-        </div>
-
-      </div>
-
     </div>
-
-  </div>
-</section>
-
-
-<!-- CONTACT -->
-
-<section class="contact" id="contact">
-
-  <div class="container contact-inner">
-
-    <div>
-
-      <span>ارتباط با ما</span>
-
-      <h2>
-        برای همکاری،
-        <br>
-        با ما در تماس باشید.
-      </h2>
-
-      <p>
-        برای دریافت اطلاعات محصولات، همکاری
-        و ارتباط با کارخانه با ما تماس بگیرید.
-      </p>
-
-    </div>
-
-
-    <a href="tel:01133532778" class="big-phone">
-
-      <div class="phone-icon">
-        ☎
-      </div>
-
-      <div>
-        <small>تماس با کارخانه</small>
-        <strong>۰۱۱۳۳۵۳۲۷۷۸</strong>
-      </div>
-
-      <b>←</b>
-
-    </a>
-
-  </div>
-
-</section>
-
+  </section>
 </main>
 
-
-<!-- FOOTER -->
-
 <footer>
-
-  <div class="container footer">
-
-    <div class="footer-brand">
-
-      <a href="#home" class="logo">
-        <div class="logo-mark">N</div>
-
-        <div class="logo-name">
-          <strong>نایب‌شیر</strong>
-          <span>NAYEB SHIR</span>
-        </div>
-      </a>
-
-      <p>
-        شرکت لبنی چوپان آستانه
-      </p>
-
-    </div>
-
-
-    <div>
-      <h4>دسترسی سریع</h4>
-      <a href="#home">خانه</a>
-      <a href="#products">محصولات</a>
-      <a href="#about">درباره ما</a>
-      <a href="#factory">کارخانه</a>
-    </div>
-
-
-    <div>
-      <h4>تماس</h4>
-
-      <a href="tel:01133532778">
-        ۰۱۱۳۳۵۳۲۷۷۸
-      </a>
-
-      <span>
-        ساری، پهنه‌کلا
-      </span>
-    </div>
-
+  <div class="container">
+    <p>© ۱۴۰۴ <strong>نایب‌شیر</strong> - شرکت لبنی چوپان آستانه | تمامی حقوق محفوظ است.</p>
   </div>
-
-
-  <div class="copyright">
-    © ۱۴۰۵ شرکت لبنی چوپان آستانه — تمامی حقوق محفوظ است.
-  </div>
-
 </footer>
 
+<!-- مودال (پنجره بازشو) -->
+<div class="modal-overlay" id="cowModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-cow">
+      <img src="images/cow.png" alt="گاو نایب‌شیر">
+    </div>
+    <span class="game-badge">🎮 مینی‌اپ بازی</span>
+    <h3>سلام! من گاوی نایب‌شیرم! 🐮</h3>
+    <div class="game-emoji">🐄 ➜ 🏭</div>
+    <p>
+      <strong>🎯 شیر رو از مزرعه برسون به کارخونه!</strong><br>
+      🌾 ماجراجویی کن، از موانع عبور کن و جایزه بگیر!<br>
+      ⭐ هر روز یک چالش جدید منتظرته!
+    </p>
+    <a href="https://t.me/NAYEB_SHIR_BOT" target="_blank" class="telegram-btn">
+      <span>🚀</span> شروع ماجراجویی در تلگرام
+    </a>
+  </div>
+</div>
 
 <script src="script.js"></script>
-
 </body>
-            </html>
+  </html>
